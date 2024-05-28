@@ -1,12 +1,16 @@
-import LoadComponent from './layouts/Layout1/LoadComponent/LoadComponent';
-import ErrorPage from './layouts/Layout1/Error_Page/ErrorPage';
-import Layout_1 from './layouts/Layout1/layout_1';
-function App() {
-  return (<div >
-    <Layout_1>
-      <LoadComponent/>
-    </Layout_1>
-  </div>);
+import { Provider } from 'react-redux';
+
+import store from './store/store';
+import Home from './pages/Home';
+import { RouterProvider } from 'react-router-dom';
+import router from './routes/routings';
+const App=()=> {
+  
+  return (<>
+    <Provider store={store}>
+      <RouterProvider router={router}/>
+    </Provider>
+  </>);
 }
 
 export default App;

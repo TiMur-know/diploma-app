@@ -1,34 +1,30 @@
-import { useDispatch } from 'react-redux';
-import Button from '../../components/UI/Button';
-import Layout_1 from '../../layouts/Layout1';
-import { addRoute, deleteRoute, fetchRoutesPasang, updateRoute } from '../../store/actions/routes';
 
-import { useEffect } from 'react';
-import RouteList from '../../components/RouteList';
-const Home = () => {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchRoutesPasang());
-  }, [dispatch]);
+import Layout from '../../layouts/Layout1'; 
+import backgroundImage from '../../assets/1.jpeg'; 
+import { Link } from 'react-router-dom';
+
+const HomePage = () => {
   return (
-    <Layout_1>
-      <div>
-          <RouteList/>
-          
-        <Button text='Save and Train Data File' onClick={dispatch(fetch)} />
-				<Button text='Get Data Structure' onClick={dispatch(fetch)} />
-        <Button text='Predict Data' onClick={dispatch(fetch)} />
-
-
-        <Button text='Add Route' onClick={dispatch(addRoute)} />
-        <Button text='Update Route' onClick={dispatch(updateRoute)} />
-        <Button text='Delete Route' onClick={dispatch(deleteRoute)} />
-
+    <Layout>
+      <div
+      className="flex flex-col items-center justify-center h-screen bg-cover bg-center  opacity-90"
+      style={{
+        backgroundImage: `url(${backgroundImage})`, 
+      }}
+    >
+      <div className="text-center animate-fadeIn">
+        <h1 className="text-5xl font-bold text-white mb-8">Welcome to Our Website</h1>
+        <p className="text-lg text-white mb-4">Explore our transport and more</p>
+        <Link
+          to="/transports"
+          className="px-6 py-3 bg-green-500 text-white rounded-md hover:bg-green-600 transition duration-300"
+        >
+          View Transports
+        </Link>
       </div>
-			<div>
-
-			</div>
-    </Layout_1>
+    </div>
+    </Layout>
   );
 };
-export default Home;
+
+export default HomePage;

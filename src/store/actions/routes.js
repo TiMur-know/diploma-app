@@ -41,20 +41,23 @@ export const setError=(error)=>({
 	payload:error
 })
 
-export const fetchRoutes=()=>async(dispatch)=>{
-	dispatch(setLoading(true))
-	try {
-		console.log(url)
-    const response = await axios.get(`${url}/routes`);
+export const fetchRoutes = (start, end) => async (dispatch) => {
+  dispatch(setLoading(true));
+	let urlWithParams = `${url}/routes`;
+
+  if (start !== undefined && end !== undefined) {
+    urlWithParams += `?start=${start}&end=${end}`;
+  }
+  try {
+    const response = await axios.get(urlWithParams);
     dispatch(setData(response.data));
-		dispatch(setRoutes(response.data))
+    dispatch(setRoutes(response.data));
   } catch (error) {
     dispatch(setError(error.message));
+  } finally {
+    dispatch(setLoading(false));
   }
-	finally{
-		dispatch(setLoading(false))
-	}
-}
+};
 export const fetchRoutesPasang=()=>async(dispatch)=>{
 	dispatch(setLoading(true))
 	try {

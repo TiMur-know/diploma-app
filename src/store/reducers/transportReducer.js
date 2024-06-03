@@ -1,7 +1,10 @@
 
 import { ADD_TRANSPORT, DELETE_TRANSPORT, SET_DATA, SET_ERROR, SET_LOADING, UPDATE_TRANSPORT } from '../actions/transports'
 const initialState={
-	transports:[]
+	transports:[],
+	data:null,
+	loading: false,
+  error: null
 }
 const transportReducer=(state=initialState,action)=>{
 	switch(action.type){
@@ -20,10 +23,11 @@ const transportReducer=(state=initialState,action)=>{
 				...state,
 				transports:state.transports.filter(transport=>transport.id!==action.payload)
 			}
+			
 			case SET_DATA:
 				return {
 					...state,
-					transports: action.payload,
+					data: action.payload,
 					loading: false,
 					error: null,
 				};

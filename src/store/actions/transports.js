@@ -34,19 +34,34 @@ export const setError=(error)=>({
 	payload:error
 })
 
-export const fetchTransports=()=>async(dispatch)=>{
-	dispatch(setLoading(true))
-	try {
-    const response = await axios.get(`${url}/transports`);
+export const fetchTransports = (start, end) => async (dispatch) => {
+  dispatch(setLoading(true));
+  let urlWithParams = `${url}/transports`;
+
+  if (start !== undefined && end !== undefined) {
+    urlWithParams += `?start=${start}&end=${end}`;
+  }
+
+  try {
+    const response = await axios.get(urlWithParams);
     dispatch(setData(response.data));
   } catch (error) {
     dispatch(setError(error.message));
+  } finally {
+    dispatch(setLoading(false));
   }
-	finally{
-		dispatch(setLoading(false))
+};
+export const fetchTransportDetails=(id)=>async(dispatch)=>{
+	dispatch(setLoading(true));
+  try {
+    console.log(id)
+    
+    const response = await axios.get(`${url}/transports?id=${id}`);
+    console.log(response.data)
+    dispatch(setData(response.data));
+  } catch (error) {
+    dispatch(setError(error.message));
+  } finally {
+    dispatch(setLoading(false));
+  }
 }
-}
-/*сделать главную страницу со всем данными (маршруты и их транспорты)
-сделать список карточек транспртов с маршрутами относящимся к ним
-*/
-

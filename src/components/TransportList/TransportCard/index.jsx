@@ -1,12 +1,15 @@
 import { useDispatch } from "react-redux";
 import { deleteTransport, updateTransport } from "../../../store/actions/transports";
 import Button from "../../UI/Button";
+import { useNavigate } from "react-router-dom";
 
 const TransportCard=({ transport })=>{
 	const {id, name, capacity, fuel_consumption, company_tax, vehicle_type, fuel_type, maintenance_cost } = transport;
 	/*const dispatch=useDispatch()*/
+	const navigate = useNavigate();
 	const handleCardClick=()=>{
 		console.log(`Transport clicked: ${id}`);
+		navigate(`/transports/${id}`)
 	}
 	return(
 		<div className="bg-white shadow-md rounded-lg p-4 m-2 transition transform hover:scale-105 cursor-pointer" onClick={handleCardClick}

@@ -5,17 +5,17 @@ import RouteItem from './RouteItem';
 const RouteSecondList = () => {
   const { routes, error, isLoading } = useSelector((state) => state.routes);
   return (
-    <div className='p-4'>
-      <h1 className='text-2xl font-bold mb-4 text-lime-500'>Routes and Their Transports</h1>
+    <div className=''>
+
       <div className='grid grid-cols-8 gap-4 bg-green-800 py-2 px-4 rounded-t-lg text-white'>
         <div className='font-bold'>Route ID</div>
-        <div className='font-bold'>Transport Name</div>
         <div className='font-bold'>Date</div>
         <div className='font-bold'>Start Location</div>
         <div className='font-bold'>End Location</div>
         <div className='font-bold'>Departure Time</div>
         <div className='font-bold'>Arrival Time</div>
         <div className='font-bold'>Fare Amount</div>
+        <div className='font-bold'>Transport Id</div>
       </div>
       {routes && routes.length > 0 ? (
         <div>

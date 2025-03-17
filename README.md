@@ -11,27 +11,46 @@ This project is a web application for managing transports, routes, and predictio
 - [Contributing](#contributing)
 - [License](#license)
 
+## Server Installation
+
+1. Clone the server repository:
+   ```sh
+   git clone 
+   ```
+2. Navigate to the server directory:
+   ```sh
+   cd diploma-server
+   ```
+3. Install the server dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the server:
+   ```sh
+   npm run start
+   ```
+
 ## Installation
 
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/your-username/diploma-app.git
-    ```
+   ```sh
+   git clone https://github.com/TiMur-know/server-app-diploma
+   ```
 2. Navigate to the project directory:
-    ```sh
-    cd diploma-app
-    ```
+   ```sh
+   cd diploma-app
+   ```
 3. Install the dependencies:
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 
 ## Usage
 
 1. Start the development server:
-    ```sh
-    npm start
-    ```
+   ```sh
+   npm start
+   ```
 2. Open your browser and navigate to `http://localhost:3000`.
 
 ## Available Scripts

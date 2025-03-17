@@ -1,9 +1,16 @@
-import { ADD_ROUTE, DELETE_ROUTE, UPDATE_ROUTE,SET_DATA,SET_LOADING,SET_ERROR } from '../actions/routes';
+import {
+  ADD_ROUTE,
+  DELETE_ROUTE,
+  UPDATE_ROUTE,
+  SET_DATA,
+  SET_LOADING,
+  SET_ERROR,
+} from '../actions/routes';
 
 const initialState = {
   routes: [],
   loading: false,
-  error: null
+  error: null,
 };
 const routeReducer = (state = initialState, action) => {
   switch (action.type) {

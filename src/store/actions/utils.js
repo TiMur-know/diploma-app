@@ -55,8 +55,7 @@ export const fetchSetAndTrainData = (data) => async (dispatch) => {
       }
     });
     dispatch(setTrainState(response.data));
-    //Data has been successfully trained
-    //An error occurred while training data
+
   } catch (error) {
     dispatch(setError(error));
   } finally {
@@ -69,8 +68,7 @@ export const fetchReTrainData=()=>async (dispatch)=>{
   try{
     const response = await axios.get(`${url}/utils/train`)
     dispatch(setTrainState(response.data))
-    //Data has been successfully retrained
-    //An error occurred while retraining data
+
   }catch(error){
     dispatch(setError(error))
   }finally{
@@ -87,8 +85,7 @@ export const fetchPredict = (data) => async (dispatch) => {
       }
     });
     dispatch(setPredictions(response.data));
-    //Data that was predicted
-    //Error predicting data 
+
   } catch (error) {
     dispatch(setError(error.message));
   } finally {

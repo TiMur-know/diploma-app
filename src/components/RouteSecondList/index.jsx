@@ -1,12 +1,12 @@
+/* eslint-disable react-refresh/only-export-components */
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import RouteItem from './RouteItem';
 
 const RouteSecondList = () => {
-  const { routes, error, isLoading } = useSelector((state) => state.routes);
+  const { routes, } = useSelector((state) => state.routes);
   return (
     <div className=''>
-
       <div className='grid grid-cols-8 gap-4 bg-green-800 py-2 px-4 rounded-t-lg text-white'>
         <div className='font-bold'>Route ID</div>
         <div className='font-bold'>Date</div>

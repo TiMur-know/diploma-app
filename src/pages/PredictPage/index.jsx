@@ -7,16 +7,12 @@ import Layout_1 from '../../layouts/Layout1';
 import { fetchRoutes } from '../../store/actions/routes';
 import {
   fetchDataStructure,
-  fetchPredict,
   fetchReTrainData,
-  fetchSetAndTrainData,
 } from '../../store/actions/utils';
 import RouteSecondList from '../../components/RouteSecondList';
 
 const PredictPage = () => {
-  const { predictions, dataStructure } = useSelector(
-    (state) => state.utils
-  );
+  const { predictions, dataStructure } = useSelector((state) => state.utils);
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [action, setAction] = useState(null);
   const dispatch = useDispatch();
@@ -91,7 +87,11 @@ const PredictPage = () => {
           <h3 className='text-xl font-semibold mb-2 text-emerald-400'>
             Predicted Values{' '}
             <div className='text-base float-right'>
-              <Button text='Predict Data' onClick={handlePredictData} className='mx-2'/>
+              <Button
+                text='Predict Data'
+                onClick={handlePredictData}
+                className='mx-2'
+              />
             </div>
           </h3>
           <div className='overflow-x-auto'>

@@ -1,6 +1,3 @@
-import { useDispatch } from "react-redux";
-import { deleteTransport, updateTransport } from "../../../store/actions/transports";
-import Button from "../../UI/Button";
 import { useNavigate } from "react-router-dom";
 
 const TransportCard=({ transport })=>{

@@ -4,7 +4,7 @@ import {
   SET_PREDICTIONS,
   SET_DATA_STRUCTURE,
   SET_TRAIN,
-  SET_FILE_DATA
+  SET_FILE_DATA,
 } from '../actions/utils';
 
 const initialState = {
@@ -45,10 +45,10 @@ const utilReducer = (state = initialState, action) => {
         trainData: action.payload,
       };
     case SET_FILE_DATA:
-      return{
+      return {
         ...state,
-        uploadResult:action.payload,
-      }
+        uploadResult: action.payload,
+      };
 
     default:
       return state;

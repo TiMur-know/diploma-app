@@ -1,9 +1,10 @@
+/* eslint-disable react-refresh/only-export-components */
 import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import RouteItem from './RouteItem';
 
 const RouteSecondList = () => {
-  const { routes, error, isLoading } = useSelector((state) => state.routes);
+  const { routes, } = useSelector((state) => state.routes);
   return (
     <div className='p-4'>
       <h1 className='text-2xl font-bold mb-4 text-lime-500'>Routes and Their Transports</h1>

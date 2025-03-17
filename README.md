@@ -1,6 +1,7 @@
 # Transport Predict App
 
 This project is a web application for managing transports, routes, and predictions. It is built using React and Redux.
+![image](https://github.com/user-attachments/assets/fe4e9c71-af02-4e1c-915b-c21df83f4eb6)
 
 ## Table of Contents
 

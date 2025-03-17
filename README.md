@@ -35,7 +35,7 @@ This project is a web application for managing transports, routes, and predictio
 
 1. Clone the repository:
    ```sh
-   git clone [t](https://github.com/TiMur-know/server-app-diploma)
+   git clone https://github.com/TiMur-know/server-app-diploma
    ```
 2. Navigate to the project directory:
    ```sh

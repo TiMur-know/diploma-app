@@ -92,3 +92,6 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## License
 
 This project is licensed under the MIT License.
+
+# Interface
+![image421](https://github.com/user-attachments/assets/ef37a709-c971-4f19-a702-f8fb70be5a18)

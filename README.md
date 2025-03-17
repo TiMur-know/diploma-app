@@ -2,6 +2,7 @@
 
 This project is a web application for managing transports, routes, and predictions. It is built using React and Redux.
 
+
 ## Table of Contents
 
 - [Installation](#installation)

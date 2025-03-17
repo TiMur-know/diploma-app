@@ -1,7 +1,7 @@
 # Transport Predict App
 
 This project is a web application for managing transports, routes, and predictions. It is built using React and Redux.
-![image](https://github.com/user-attachments/assets/fe4e9c71-af02-4e1c-915b-c21df83f4eb6)
+
 
 ## Table of Contents
 
@@ -73,3 +73,6 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## License
 
 This project is licensed under the MIT License.
+
+# Interface
+![image421](https://github.com/user-attachments/assets/ef37a709-c971-4f19-a702-f8fb70be5a18)
